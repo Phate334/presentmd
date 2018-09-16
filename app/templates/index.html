@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+    <head>
+        <title>Presentmd</title>
+    </head>
+
+    <body>
+        <ul>
+            {% for e in entities%}
+            <li style="list-style: none;">
+                {% if e.is_md %}
+                <img src="/static/icons/baseline-play_arrow-24px.svg" />
+                {% else %}
+                <img src="/static/icons/baseline-subdirectory_arrow_right-24px.svg" />
+                {% endif %}
+                <a href="{{e.url}}">{{e.name}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </body>
+
+</html>
